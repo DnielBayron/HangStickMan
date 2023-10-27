@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 * {
-    
-    background-color: #d8f0ed;
-background-image: url("https://www.transparenttextures.com/patterns/ag-square.png");
+    background-color: #008da6;
+background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+
 }

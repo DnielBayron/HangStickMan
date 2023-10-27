@@ -19,7 +19,7 @@ const leftLeg = <div className= "h-[7px] w-[100px] bg-black absolute top-[200px]
 const bodyParts = [head, body, rightArm , leftArm , rightLeg , leftLeg]
 
 return (  
-      <div className="relative ">
+      <div className="relative">
       {bodyParts.slice(0, numberOfGuesses)}
       <div className="w-[10px] h-[50px] bg-black absolute top-0 right-0 " />
       <div className="w-[200px] h-[10px] bg-black ml-[120px]" />

@@ -73,27 +73,36 @@ const App: React.FC = () => {
     }, [])
     
 
+ 
+    
   return (
   
       <div className="max-w-[1280px] flex flex-col gap-8 items-center m-auto">
-                <div className="mt-5 p-4 font-serif font-bold text-center">
-                {isWinner && <div className="text-blue-500 text-6xl font-Play ">Winner! ✔ <div className="text-2xl mt-4 "><span className="text-green-500 text-2xl font-mono mr-1 border border-solid rounded-lg bg-neutral-700 px-2 py-1">ENTER</span><span className="text-black ">to Refresh</span> </div></div>}
-                {isLoser && <div className="text-red-500 text-5xl font-Play"> TRY AGAIN!<div className="text-2xl mt-4 "><span className="text-green-500 text-2xl font-mono mr-1 border border-solid rounded-lg bg-neutral-700 px-2 py-1">ENTER</span><span className="text-black">to Refresh</span> </div></div>}
+                <div className="mt-5 p-4 text-center">
+                {isWinner && <div className="text-red-500 font-bold text-4xl xl:text-5xl font-Play "> 🎉 CONGRATS! ✔ 🎉 <div className="mt-4 text-2xl"><button 
+                onClick={() => setGuessedLetters([])}
+                className="text-green-500 p-2  bg-gray-500 rounded-lg ">Enter</button> <span className=" text-black">to Refresh</span></div></div> }
+                {isLoser &&  <div className="text-red-500 font-bold  text-4xl xl:text-5xl font-Play "> TRY AGAIN! 😭 <div className="mt-4 text-2xl"><button 
+                onClick={() => setGuessedLetters([])}
+                className="text-green-500 xl:p-2 p-1   bg-gray-500 rounded-lg ">Enter</button> <span className=" text-black">to Refresh</span></div></div> }
                 </div>
 
 
          
               
                 
-
+      
         <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
+   
+        
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 xl:gap-0">
         <HangmanWord reveal={isLoser} guessedLetters= {guessedLetters} wordToGuess = {wordToGuess} />
-    
+        
         <Keyboard 
         disabled={isWinner || isLoser}
         activeLetters= {guessedLetters.filter(letter => wordToGuess.includes(letter))}
         inactiveLetters={incorrectLetters} addGuessedLetter = {addGuessedLetter} />
-   
+        </div>
                 
       </div>
      
