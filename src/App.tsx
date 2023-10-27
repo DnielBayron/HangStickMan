@@ -79,7 +79,7 @@ const App: React.FC = () => {
   
       <div className="max-w-[1280px] flex flex-col gap-8 items-center m-auto">
                 <div className="mt-5 p-4 text-center">
-                {isWinner && <div className="text-red-500 font-bold text-4xl xl:text-5xl font-Play "> 🎉 CONGRATS! ✔ 🎉 <div className="mt-4 text-2xl"><button 
+                {isWinner && <div className="text-red-500 font-bold text-4xl  font-Play "> 🎉 CONGRATS! ✔ 🎉 <div className="mt-4 text-2xl"><button 
                 onClick={() => setGuessedLetters([])}
                 className="text-green-500 p-2  bg-gray-500 rounded-lg ">Enter</button> <span className=" text-black">to Refresh</span></div></div> }
                 {isLoser &&  <div className="text-red-500 font-bold  text-4xl xl:text-5xl font-Play "> TRY AGAIN! 😭 <div className="mt-4 text-2xl"><button 
